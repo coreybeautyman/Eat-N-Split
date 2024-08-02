@@ -1,38 +1,241 @@
-.App {
-  text-align: center;
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 5% 5% 5% 5%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.friend {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  padding-top: 3%;
+  padding-bottom: 3%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.active {
+  background-color: antiquewhite;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.imgCont {
+  width: 75px;
+  height: 75px;
+  overflow: hidden;
+  margin-left: 3%;
+}
+
+.img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.infoCont {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  margin-left: 20px;
+  margin-top: 5px;
+}
+
+.name,
+.para {
+  margin: 5px 0;
+}
+
+.btn {
+  color: black;
+  background-color: orange;
+  border: 0;
+  height: 40px;
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+  font-weight: bold;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.friendsCont {
+  z-index: 5;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 63%;
+  width: 100%;
+  max-width: 400px;
+  min-width: 350px;
+  border-radius: 5%;
+  overflow-y: scroll;
 }
 
-.App-link {
-  color: #61dafb;
+.splitBill {
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  height: 63%;
+  width: 100%;
+  max-width: 400px;
+  min-width: 350px;
+  border-radius: 5%;
+  background-color: antiquewhite;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.sbTitle {
+  margin: 10% 10% 2%;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.listItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 10%;
+}
+.input {
+  height: 30px;
+}
+
+.input,
+.select {
+  height: 30px;
+  width: 130px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.select {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 140px;
+  height: 40px;
+}
+
+.sbPara {
+  font-size: large;
+  font-weight: 500;
+}
+
+.sbBtnCont {
+  position: relative;
+  top: 37%;
+  right: 15%;
+  width: 30%;
+}
+
+.btnCont {
+  margin-right: 5%;
+}
+
+.addFriendsBtnCont {
+  position: relative;
+  top: 37%;
+  right: 15%;
+  width: 30%;
+}
+
+.modal {
+  z-index: 10;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  height: 320px;
+  width: 450px;
+  border-radius: 5%;
+  background-color: antiquewhite;
+  color: rgb(0, 0, 0);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.backgroundblur {
+  z-index: 9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(5px);
+}
+
+.backgroundblur::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.modalBtnClose {
+  margin-left: 85%;
+  background-color: transparent;
+  width: 10%;
+  border: none;
+  font-size: larger;
+  cursor: pointer;
+  margin-top: 5%;
+  margin-right: 5%;
+  z-index: 10;
+}
+
+.modalTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -30px;
+}
+
+.nameInputDiv,
+.imgInputDiv {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 8%;
+  margin-right: 8%;
+}
+
+.input {
+  height: 1.5rem;
+  width: 13rem;
+  margin-left: 5%;
+}
+
+.modalBtn {
+  width: 20%;
+  font-size: medium;
+}
+
+.modalBtnDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3%;
+}
+
+.hidden {
+  display: none;
+}
+
+.hide {
+  opacity: 0;
+  z-index: -100;
 }
